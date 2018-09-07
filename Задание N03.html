@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Домашнее задание A2</title>
+</head>
+<body>
+
+</div>
+<script>
+  "use strict";
+  window.onload = function() {
+    new_user();
+  };
+  function  new_user() {
+    var fio="";
+    var vozrast;
+    var pol;
+    var pens;
+    var pens_confirm;
+    var vozrast_days;
+    var vozrast_future;
+    enter_fio();
+    enter_vozrast();
+    enter_pol();
+      function enter_fio() {
+        function enter_fio(question) {
+          var answer=prompt(question);
+          if (!answer || isFinite(parseInt(answer))){
+            enter_fio(question);
+          } else{
+            fio+= answer+" ";
+          }
+        }
+        enter_fio("Введите вашу фамилию: ");
+        enter_fio("Введите вашу имя: ");
+        enter_fio("Введите вашу отчество: ");
+      }
+    function enter_vozrast() {
+      vozrast=parseInt(prompt("Введите возраст"));
+      if (isFinite(vozrast)){
+        vozrast_days=vozrast*365;
+        vozrast_future=vozrast+5;
+      } else {
+        enter_vozrast();
+      }
+    }
+    function enter_pol() {
+      pol=confirm("Ваш пол - мужской?");
+      pol?pens=65:pens=60;
+      if(pens==65&&vozrast>=pens || pens==60&&vozrast>=pens) {
+        pens_confirm="да";
+      } else{
+        pens_confirm="нет"
+      }
+      if(pol){
+        pol="мужской";
+      } else{
+        pol="женский";
+      }
+    }
+    
+    if (vozrast!=0&&fio.length!=0){
+      alert("ваше ФИО: "+fio+"\nваш возраст в годах: " + vozrast +"\nваш возраст в днях: "+vozrast_days+"\nчерез 5 лет вам будет: "+vozrast_future + "\nваш пол: " + pol +"\nвы на пенсии: " + pens_confirm );
+    } else {
+      alert("Введите данные снова в корректной форме");
+    }
+  }
+</script>
+</body>
+
+</html>
