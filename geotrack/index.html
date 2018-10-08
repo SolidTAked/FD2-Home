@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>geotrack</title>
+</head>
+<body>
+    <div id="wrapper" class="wrapper">
+        <div class="bg_index1"></div>
+        <div class="bg_index2"></div>
+        <div class="bg_index3"></div>
+        <div class="bg_index4"></div>
+        <div class="content">
+            <header class="header" id="header">
+                <div class="header__logo">
+                    <i class="fa fa-map-marker"></i>
+                </div>
+                <div class="header__logoText">
+                    <strong>GEOTRACK</strong><br>ver 1.0
+                </div>
+                    <div class="header__nav">
+                        <ul>
+                            <li><a href="">geomap</a></li>
+                            <li><a href="">home</a></li>
+                            <li><a href="">about</a></li>
+                            <li><a href="">features</a></li>
+                            <li><a href="">pricing</a></li>
+                        </ul>
+                    </div>
+                <div class="inputWithIcon">
+                    <input type="search" name="q" placeholder="Search geotrack">
+                    <i class="fa fa-search"></i>
+                </div>
+                <a href=""><img src="img/face.png" alt=""></a>
+            </header>
+            <div class="flexContent">
+                <aside class="aside">
+                    <div class="aside__block1">
+                        <div>
+                            <div>
+                                <span id="aside__block1__logo"></span>
+                                <span id="aside__block1__id"></span>
+                                <button id="copyInBuffer">Copy in buffer</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="aside__block2">
+                        <div>
+                            <div id="aside__block2__geoType">Geo Type:<span id="aside1"></span></div>
+                            <div id="aside__block2__shortGeo">Short Geo:<span id="aside2"></span></div>
+                            <div id="aside__block2__adress">Adress:<span id="aside3"></span></div>
+                            <div id="aside__block2__email">Email:<span id="aside4"></span></div>
+                            <div id="aside__block2__expiere">Expiere:<span id="aside5"></span></div>
+                            <div id="aside__block2__privacy">Privacy:<span id="aside6"></span></div>
+                            <button id="profile">Edit Profile</button>
+                        </div>
+                    </div>
+                </aside>
+                <div class="contentBlockFlex">
+                    <div class="contentBlockInfo"><img src="img/message.png" alt=""><span id="contentBlockInfo__Text"></span></div>
+                    <div class="content__map" id="content__map">
+                        <div id="map" class="map"></div>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer__block">
+                    <div>
+                        <strong>GEOTRACK</strong><br><span>&copy; Geotrack Inc. All right reserved 2016</span>
+                    </div>
+                    <div class="footer__info">
+                        <p><a href="">APP API</a></p>
+                        <p><a href="">SUPPORT</a></p>
+                        <p><a href=""><i class="fa fa-facebook"></i></a></p>
+                        <p><a href=""><i class="fa fa-twitter"></i></a></p>
+                        <p><a href=""><i class="fa fa-instagram"></i></a></p>
+                        <p><a href=""><i class="fa fa-vimeo-square"></i></a></p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+<script src="js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5PULa3GJEjATiNvGwqXAQsCLTOGm0m0o&callback=initMap"
+            async defer></script>
+
+</body>
+</html>
